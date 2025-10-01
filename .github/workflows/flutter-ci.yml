@@ -19,9 +19,12 @@ jobs:
         with:
           flutter-version: '3.13.0' # change if needed
           channel: 'stable'
-
+      
+      - name: Flutter clean
+        run: flutter clean
+        
       - name: Install dependencies
-        run: flutter pub get
+        run: flutter pub get --verbose
 
       - name: Analyze code
         run: flutter analyze
